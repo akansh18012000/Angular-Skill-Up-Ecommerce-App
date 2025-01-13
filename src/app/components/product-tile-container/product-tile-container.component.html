@@ -1,0 +1,12 @@
+@if (!isLoading) {
+<div>
+  <div>
+    <h1>Shop {{ category }}</h1>
+  </div>
+  <div class="product-tile-container">
+    @for (product of products; track product.id) {
+    <app-product-tile [product]="product"></app-product-tile>
+    }
+  </div>
+</div>
+}

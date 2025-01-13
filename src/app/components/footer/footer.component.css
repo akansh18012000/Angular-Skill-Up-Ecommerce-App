@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 36px 10px 24px;
+  background-color: #f8f8f8;
+}
+
+.footer img {
+  height: 80px;
+}
+
+.footer p {
+  font-weight: 700;
+  color: #333;
+}

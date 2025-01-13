@@ -1,0 +1,5 @@
+<div class="shopping-cart-tile-container">
+  @for (product of products; track product.id) {
+  <app-shopping-cart-tile [productData]="product"></app-shopping-cart-tile>
+  }
+</div>

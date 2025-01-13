@@ -1,0 +1,34 @@
+h1,
+h2 {
+  margin: 16px 0 0 32px;
+}
+
+.back-to-cart {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: max-content;
+  position: relative;
+  margin: 16px 0 0 32px;
+}
+
+.back-to-cart,
+.back-to-cart:active,
+.back-to-cart:hover {
+  color: black;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 16px;
+  margin: 24px 36px;
+}
+
+.checkout-container > div:first-child {
+  grid-column: 1 / span 8;
+}
+
+.checkout-container > div:last-child {
+  grid-column: 10 / span 3;
+}

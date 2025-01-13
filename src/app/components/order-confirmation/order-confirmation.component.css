@@ -1,0 +1,19 @@
+.order-confirmation-container {
+  margin: 24px 36px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+.order-confirmation-container > :first-child {
+  grid-column: span 9;
+}
+
+.order-confirmation-container > :last-child {
+  grid-column: span 3;
+}
+
+h1 {
+  margin: 24px 0 0 36px;
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+.order-summary {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.order-summary h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.order-summary-rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 48px;
+}
+
+.order-summary-rows p {
+  margin: 0;
+}
+
+.order-summary-row-label {
+  font-size: 20px;
+}
+
+.order-summary-row-value {
+  font-size: 1.2rem;
+  word-break: break-word;
+}

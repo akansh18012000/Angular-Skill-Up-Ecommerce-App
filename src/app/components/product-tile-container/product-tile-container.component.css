@@ -1,0 +1,15 @@
+.product-tile-container {
+  padding: 36px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 16px;
+  row-gap: 24px;
+}
+
+.product-tile-container > * {
+  grid-column: span 3;
+}
+
+h1 {
+  margin: 24px 0 0 36px;
+}

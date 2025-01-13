@@ -1,0 +1,11 @@
+@if (!isLoading) {
+<h1>Shopping Cart</h1>
+@if (!cartId || !products.length) {
+<h2>Your cart is empty</h2>
+<button routerLink="/" class="shop-now-btn">Shop Now</button>
+} @else {
+<div class="shopping-cart-container">
+  <app-shopping-cart-tile-container [products]="products" />
+  <app-order-summary-container />
+</div>
+}}

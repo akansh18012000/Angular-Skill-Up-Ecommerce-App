@@ -1,0 +1,125 @@
+<form [formGroup]="checkoutForm">
+  <div>
+    <label for="firstName">First Name</label>
+    <input
+      id="firstName"
+      formControlName="firstName"
+      placeholder="First Name"
+      required
+    />
+    @if (submitted && checkoutForm.get('firstName')?.invalid &&
+    checkoutForm.get('firstName')?.errors?.['required']) {
+    <p class="error-message">First Name is required.</p>
+    }
+  </div>
+  <div>
+    <label for="lastName">Last Name</label>
+    <input
+      id="lastName"
+      formControlName="lastName"
+      placeholder="Last Name"
+      required
+    />
+    @if (submitted && checkoutForm.get('lastName')?.invalid &&
+    checkoutForm.get('lastName')?.errors?.['required']) {
+    <p class="error-message">Last Name is required.</p>
+    }
+  </div>
+  <div>
+    <label for="phoneNumber">Phone Number</label>
+    <input
+      id="phoneNumber"
+      formControlName="phoneNumber"
+      placeholder="Phone Number"
+      required
+      maxlength="10"
+    />
+    @if (submitted && checkoutForm.get('phoneNumber')?.invalid &&
+    checkoutForm.get('phoneNumber')?.errors?.['required']) {
+    <p class="error-message">Phone Number is required.</p>
+    } @else if (submitted && checkoutForm.get('phoneNumber')?.invalid &&
+    checkoutForm.get('phoneNumber')?.errors?.['pattern']) {
+    <p class="error-message">Phone Number must be 10 digits long.</p>
+    }
+  </div>
+  <div>
+    <label for="address">Address</label>
+    <input
+      id="address"
+      formControlName="address"
+      placeholder="Address"
+      required
+    />
+    @if (submitted && checkoutForm.get('address')?.invalid &&
+    checkoutForm.get('address')?.errors?.['required']) {
+    <p class="error-message">Address is required.</p>
+    }
+  </div>
+  <div>
+    <label for="city">City</label>
+    <input id="city" formControlName="city" placeholder="City" required />
+    @if (submitted && checkoutForm.get('city')?.invalid &&
+    checkoutForm.get('city')?.errors?.['required']) {
+    <p class="error-message">City is required.</p>
+    }
+  </div>
+  <div>
+    <label for="state">State</label>
+    <input id="state" formControlName="state" placeholder="State" required />
+    @if (submitted && checkoutForm.get('state')?.invalid &&
+    checkoutForm.get('state')?.errors?.['required']) {
+    <p class="error-message">State is required.</p>
+    }
+  </div>
+  <div>
+    <label for="cardNumber">Card Number</label>
+    <input
+      id="cardNumber"
+      formControlName="cardNumber"
+      placeholder="Card Number"
+      maxlength="16"
+      required
+    />
+    @if (submitted && checkoutForm.get('cardNumber')?.invalid &&
+    checkoutForm.get('cardNumber')?.errors?.['required']) {
+    <p class="error-message">Card Number is required.</p>
+    } @else if (submitted && checkoutForm.get('cardNumber')?.invalid &&
+    checkoutForm.get('cardNumber')?.errors?.['pattern']) {
+    <p class="error-message">Card Number must be 16 digits long.</p>
+    }
+  </div>
+  <div>
+    <label for="cardExpiry">Card Expiry</label>
+    <input
+      id="cardExpiry"
+      formControlName="cardExpiry"
+      placeholder="MM/YY"
+      required
+      maxlength="5"
+    />
+    @if (submitted && checkoutForm.get('cardExpiry')?.invalid &&
+    checkoutForm.get('cardExpiry')?.errors?.['required']) {
+    <p class="error-message">Card Expiry is required.</p>
+    } @else if (submitted && checkoutForm.get('cardExpiry')?.invalid &&
+    checkoutForm.get('cardExpiry')?.errors?.['pattern']) {
+    <p class="error-message">Card Expiry must be in MM/YY format.</p>
+    }
+  </div>
+  <div>
+    <label for="cvv">CVV</label>
+    <input
+      id="cvv"
+      formControlName="cvv"
+      placeholder="CVV"
+      type="password"
+      required
+    />
+    @if (submitted && checkoutForm.get('cvv')?.invalid &&
+    checkoutForm.get('cvv')?.errors?.['required']) {
+    <p class="error-message">CVV is required.</p>
+    } @else if (submitted && checkoutForm.get('cvv')?.invalid &&
+    checkoutForm.get('cvv')?.errors?.['pattern']) {
+    <p class="error-message">CVV must be 3 digits long.</p>
+    }
+  </div>
+</form>

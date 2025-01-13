@@ -1,0 +1,20 @@
+<div class="shopping-cart-tile">
+  <a [routerLink]="['/product', product.id]">
+    <img [src]="product.image" alt="Product Image" class="product-image" />
+  </a>
+  <div class="product-details">
+    <a [routerLink]="['/product', product.id]">
+      <h2 class="product-title">{{ product.title }}</h2>
+    </a>
+    <p class="product-quantity">Quantity: {{ quantity }}</p>
+    <p class="product-price">Price: {{ product.price | currency }}</p>
+  </div>
+  <div class="product-actions">
+    <p class="product-price-total">{{ totalPrice | currency }}</p>
+    @if (url === '/cart') {
+    <button class="remove-button" (click)="removeProduct(product.id)">
+      Remove
+    </button>
+    }
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="product-tile">
+  <a [routerLink]="['/product', product.id]"></a>
+  <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+  <div class="product-details">
+    <h2 class="product-title">{{ product.title }}</h2>
+    <div class="product-content-container">
+      <p class="product-description">{{ product.description }}</p>
+      <div>
+        <p class="product-price">{{ product.price | currency }}</p>
+        <div class="product-rating">
+          <span
+            >Rating: {{ product.rating.rate }} ({{
+              product.rating.count
+            }}
+            reviews)</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

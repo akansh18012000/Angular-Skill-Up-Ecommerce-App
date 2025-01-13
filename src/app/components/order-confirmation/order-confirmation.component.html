@@ -1,0 +1,16 @@
+@if (!isLoading) {
+<h1>Thank You for your Order</h1>
+<div class="order-confirmation-container">
+  <div>
+    <app-shopping-cart-tile-container [products]="products" />
+    <h2>Shipping Info</h2>
+    <p>{{ shippingDetails?.firstName }} {{ shippingDetails?.lastName }}</p>
+    <p>{{ shippingDetails?.address }}</p>
+    <p>{{ shippingDetails?.city }}, {{ shippingDetails?.state }}</p>
+    <p>{{ shippingDetails?.phoneNumber }}</p>
+  </div>
+  <div>
+    <app-order-summary />
+  </div>
+</div>
+}

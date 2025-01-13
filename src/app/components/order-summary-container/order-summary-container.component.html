@@ -1,0 +1,8 @@
+<div>
+  <app-order-summary />
+  @if (url === '/cart') {
+  <button routerLink="/checkout">Checkout</button>
+  } @else if (url === '/checkout') {
+  <button (click)="handlePlaceOrder()">Place Order</button>
+  }
+</div>

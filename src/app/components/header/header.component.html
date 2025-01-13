@@ -1,0 +1,17 @@
+<header>
+  <a routerLink="/" class="logo">
+    <img src="/Logo.png" alt="Logo" />
+  </a>
+  <nav class="nav-links">
+    <a routerLink="men's-clothing">Men's Clothing</a>
+    <a routerLink="women's-clothing">Women's Clothing</a>
+    <a routerLink="jewelery">Jewellery</a>
+    <a routerLink="electronics">Electronics</a>
+  </nav>
+  <a routerLink="cart" class="cart-icon">
+    @if(url !== '/order-confirmation' && totalItems) {
+    <div class="cart-items">{{ totalItems }}</div>
+    }
+    <mat-icon>shopping_cart</mat-icon>
+  </a>
+</header>

@@ -1,0 +1,4 @@
+.shopping-cart-tile-container {
+  display: flex;
+  flex-direction: column;
+}
