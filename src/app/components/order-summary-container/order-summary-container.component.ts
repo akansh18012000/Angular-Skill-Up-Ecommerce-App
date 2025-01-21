@@ -17,11 +17,6 @@ export class OrderSummaryContainerComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.url = this.router.url;
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.url = event.url;
-      }
-    });
   }
   handlePlaceOrder(): void {
     this.checkoutFormValidation.updateFormSubmitted(true);

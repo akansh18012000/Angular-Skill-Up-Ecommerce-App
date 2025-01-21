@@ -40,10 +40,6 @@ export class ShoppingCartTileComponent implements OnInit {
     this.cartService.updateRemoveProduct(productId);
   }
   ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.url = event.url;
-      }
-    });
+    this.url = this.router.url;
   }
 }

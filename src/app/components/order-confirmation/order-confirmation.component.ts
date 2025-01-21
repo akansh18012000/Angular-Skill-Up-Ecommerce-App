@@ -37,8 +37,6 @@ export class OrderConfirmationComponent implements OnInit {
         this.loaderService.hide();
         setTimeout(() => {
           localStorage.clear();
-          this.cartService.updateTotalItems(0);
-          this.cartService.updateTotalPrice(0);
         }, 500);
       });
   }
